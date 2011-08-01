@@ -41,8 +41,6 @@
 
                 <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Site description') ) ?>
 
-                <?php get_search_form(); ?>
-
                 <?php wp_nav_menu(array('menu' => 'Top menu', 'theme_location' => 'Top menu', 'depth' => 1, 'container' => 'div', 'container_class' => 'menu', 'menu_id' => false, 'menu_class' => false)); ?>
 
             </div>
