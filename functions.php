@@ -5,7 +5,7 @@
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'automatic-feed-links' );
 
-function sight_setup() {
+function endeleo_setup() {
 	update_option('thumbnail_size_w', 290);
     update_option('thumbnail_size_h', 290);
     add_image_size( 'mini-thumbnail', 50, 50, true );
@@ -13,7 +13,7 @@ function sight_setup() {
     register_nav_menu('Navigation', __('Navigation'));
     register_nav_menu('Top menu', __('Top menu'));
 }
-add_action( 'init', 'sight_setup' );
+add_action( 'init', 'endeleo_setup' );
 
 if ( is_admin() && isset($_GET['activated'] ) && $pagenow == 'themes.php' ) {
     update_option( 'posts_per_page', 12 );
@@ -97,21 +97,21 @@ $meta_box = array(
         )
     )
 );
-add_action('admin_menu', 'sight_add_box');
+add_action('admin_menu', 'endeleo_add_box');
 
 // Add meta box
-function sight_add_box() {
+function endeleo_add_box() {
     global $meta_box;
 
-    add_meta_box($meta_box['id'], $meta_box['title'], 'sight_show_box', $meta_box['page'], $meta_box['context'], $meta_box['priority']);
+    add_meta_box($meta_box['id'], $meta_box['title'], 'endeleo_show_box', $meta_box['page'], $meta_box['context'], $meta_box['priority']);
 }
 
 // Callback function to show fields in meta box
-function sight_show_box() {
+function endeleo_show_box() {
     global $meta_box, $post;
 
     // Use nonce for verification
-    echo '<input type="hidden" name="sight_meta_box_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
+    echo '<input type="hidden" name="endeleo_meta_box_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
 
     echo '<table class="form-table">';
 
@@ -130,14 +130,14 @@ function sight_show_box() {
     echo '</table>';
 }
 
-add_action('save_post', 'sight_save_data');
+add_action('save_post', 'endeleo_save_data');
 
 // Save data from meta box
-function sight_save_data($post_id) {
+function endeleo_save_data($post_id) {
     global $meta_box;
 
     // verify nonce
-    if (!wp_verify_nonce($_POST['sight_meta_box_nonce'], basename(__FILE__))) {
+    if (!wp_verify_nonce($_POST['endeleo_meta_box_nonce'], basename(__FILE__))) {
         return $post_id;
     }
 
@@ -171,7 +171,7 @@ function sight_save_data($post_id) {
 
 function options_admin_menu() {
 	// here's where we add our theme options page link to the dashboard sidebar
-	add_theme_page("Sight Theme Options", "Theme Options", 'edit_themes', basename(__FILE__), 'options_page');
+	add_theme_page("Endeleo Theme Options", "Theme Options", 'edit_themes', basename(__FILE__), 'options_page');
 }
 add_action('admin_menu', 'options_admin_menu');
 
@@ -180,7 +180,7 @@ function options_page() {
 	?>
     <div class="wrap">
         <div id="icon-options-general" class="icon32"><br /></div>
-		<h2>Sight Theme Options</h2>
+		<h2>Endeleo Theme Options</h2>
 
         <form method="post" action="">
 			<input type="hidden" name="update_options" value="true" />
@@ -256,7 +256,7 @@ if (function_exists('register_sidebar')) {
 class GetConnected extends WP_Widget {
 
     function GetConnected() {
-        parent::WP_Widget(false, $name = 'Sight Social Links');
+        parent::WP_Widget(false, $name = 'Endeleo Social Links');
     }
 
     function widget($args, $instance) {
@@ -509,7 +509,7 @@ add_action('widgets_init', create_function('', 'return register_widget("GetConne
 class Recentposts_thumbnail extends WP_Widget {
 
     function Recentposts_thumbnail() {
-        parent::WP_Widget(false, $name = 'Sight Recent Posts');
+        parent::WP_Widget(false, $name = 'Endeleo Recent Posts');
     }
 
     function widget($args, $instance) {
