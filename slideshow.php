@@ -36,6 +36,5 @@
 
             <a href="javascript: void(0);" id="larr"></a>
             <a href="javascript: void(0);" id="rarr"></a>
-	</div>
-
+        </div>
     <?php endif; ?>
