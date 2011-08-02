@@ -16,7 +16,7 @@
             wp_enqueue_script('script', get_template_directory_uri() . '/js/script.js', 'jquery', false);
 		?>
         <?php wp_head(); ?>
-        <?php if ( is_home() && !get_option('ss_disable') ) : ?>
+        <?php if ( is_home() || is_front_page() ) : ?>
         <script type="text/javascript">
             (function($) {
                 $(function() {
@@ -47,7 +47,7 @@
 
             <?php wp_nav_menu(array('menu' => 'Navigation', 'theme_location' => 'Navigation', 'depth' => 2, 'container' => 'div', 'container_class' => 'nav', 'menu_class' => 'dd', 'menu_id' => 'dd', 'walker' => new extended_walker())); ?>
 
-            <?php if ( is_home() && !get_option('ss_disable') ) get_template_part('slideshow'); ?>
+            <?php if ( is_home() || is_front_page() ) get_template_part('slideshow'); ?>
 
             <!-- Container -->
             <div id="container" class="clear">
