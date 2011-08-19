@@ -31,21 +31,25 @@
         </script>
         <?php endif; ?>
 	</head>
-	<body <?php echo (get_option('bg_color')) ? 'style="background-color: '.get_option('bg_color').';"' : '' ?>>
-        <div class="wrapper">
 
+	<body>
             <div class="header clear">
+                <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Site description') ) ?>
+
+		<?php wp_nav_menu(array('menu' => 'Top menu', 'theme_location' => 'Top menu', 'depth' => 1, 'container' => 'div', 'container_class' => 'menu', 'menu_id' => false, 'menu_class' => false)); ?>
+
+	    </div>
+	    <div class="subheader">
+		<ul>
+			<li class="tagline"><?php echo get_bloginfo ( 'description' ) ?></p>
+			<li class="donate"><a href='#'>donate</a></p>
+		</ul>
+        </div>
+
+        <div class="wrapper">
                 <div class="logo">
                     <a href="<?php bloginfo('home'); ?>"><img src="<?php echo (get_option('logo_url')) ? get_option('logo_url') : get_bloginfo('template_url') . '/images/logo.png' ?>" alt="<?php bloginfo('name'); ?>"/></a>
                 </div>
-
-                <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Site description') ) ?>
-
-                <?php wp_nav_menu(array('menu' => 'Top menu', 'theme_location' => 'Top menu', 'depth' => 1, 'container' => 'div', 'container_class' => 'menu', 'menu_id' => false, 'menu_class' => false)); ?>
-
-            </div>
-
-            <?php wp_nav_menu(array('menu' => 'Navigation', 'theme_location' => 'Navigation', 'depth' => 2, 'container' => 'div', 'container_class' => 'nav', 'menu_class' => 'dd', 'menu_id' => 'dd', 'walker' => new extended_walker())); ?>
 
             <?php if ( is_home() || is_front_page() ) get_template_part('slideshow'); ?>
 
