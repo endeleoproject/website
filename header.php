@@ -51,9 +51,9 @@
                     <a href="<?php bloginfo('home'); ?>"><img src="<?php echo (get_option('logo_url')) ? get_option('logo_url') : get_bloginfo('template_url') . '/images/logo.png' ?>" alt="<?php bloginfo('name'); ?>"/></a>
                 </div>
 
-            <?php if ( is_home() || is_front_page() ) get_template_part('slideshow'); ?>
-
             <!-- Container -->
             <div id="container" class="clear">
                 <!-- Content -->
                 <div id="content">
+		    <?php if ( is_home() || is_front_page() ) get_template_part('slideshow'); ?>
+

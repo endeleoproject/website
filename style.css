@@ -106,19 +106,19 @@ body {font: 62.5% "QuicksandBold", Arial, sans-serif; background-color: #EBE5D9;
 .left {float: left;}
 .right {float: right;}
 
-.wrapper {width: 975px; background: #fff; margin: 0 auto;}
-#container {padding: 30px 0 45px;}
+.wrapper {width: 975px; margin: 0 auto;}
+#container {padding: 15px 0 15px;}
 
 /*** Header ***/
 
 .header {background-color: #68B6B8}
 
-.logo {width: 250px; height: 128px; padding: 25px 25px; float: left; background-color: #FFF; position: relative; top: -100px}
+.logo {width: 250px; height: 100px; padding: 25px 25px; float: left; background-color: #FFF; position: relative; top: -100px}
 .logo img {max-height: 128px; max-width: 290px;}
 
 .menu {margin: 0 auto; width: 650px; padding-left: 450px; padding-top: 37px;}
 .menu ul {height: 24px}
-.menu li {font-size: 11px; float: left; font-size: 16px; text-transform: lowercase; padding: 4px 20px;}
+.menu li {float: left; font-size: 16px; text-transform: lowercase; padding: 4px 20px;}
 .menu a {color: #FFF; text-decoration: none;}
 .menu a:hover {color: #582C23;}
 
@@ -147,8 +147,8 @@ a.dd_hover:hover {text-decoration: none !important;}
 
 /*** Slideshow ***/
 
-#slideshow, .slideshow {height: 290px; width: 975px; overflow: hidden; position: relative;}
-.slide {height: 290px; width: 975px; background: #ffea97;}
+#slideshow, .slideshow {height: 290px; width: 660px; overflow: hidden; position: relative; padding-bottom: 15px;}
+.slide {height: 290px; width: 660px; background: #fff;}
 .slide img {display: block; float: left; width: 640px; height: 290px; position: relative; top: -20px; left: -30px;}
 .slide .post {padding: 20px 30px 0;}
 .slide .post-category {font-size: 11px; color: #d9d9d9; text-transform: uppercase; margin-bottom: 5px;}
@@ -163,14 +163,14 @@ a.dd_hover:hover {text-decoration: none !important;}
 .slide .post .post-meta a:hover {text-decoration: underline;}
 .slide .post .post-author {text-transform: uppercase;}
 .slide .post-content p {margin-bottom: 15px;}
-#larr, #rarr {display: block; width: 32px; height: 53px; position: absolute; top: 106px !important; opacity: 0.2; z-index: 99 !important;}
-#larr {background: #000 url("images/larr.png") 8px 50% no-repeat; left: 0 !important;}
-#rarr {background: #000 url("images/rarr.png") 11px 50% no-repeat; right: 0 !important;}
+#larr, #rarr {display: block; width: 32px; height: 53px; position: absolute; top: 206px !important; opacity: 0.2; z-index: 99 !important;}
+#larr {background: #68B6B8 url("images/larr.png") 8px 50% no-repeat; left: 0 !important;}
+#rarr {background: #68B6B8 url("images/rarr.png") 11px 50% no-repeat; right: 0 !important;}
 #larr:hover, #rarr:hover {opacity: 1;}
 
 /*** Content ***/
 
-#content {width: 640px; float: right;}
+#content {width: 660px; float: right;}
 
 .content-title {color: #000; font-size: 18px; padding: 0 0 15px 30px; border-bottom: 1px solid #d9d9d9; text-transform: uppercase; position: relative;}
 .content-title a {color: #000; text-decoration: none;}
@@ -232,7 +232,7 @@ a.dd_hover:hover {text-decoration: none !important;}
 #pagination .loading {background: url("images/loading.gif") 240px 9px no-repeat; color: #555;}
 #pagination .loading:hover {background-color: transparent !important; cursor: default;}
 
-.entry {margin-bottom: 50px;}
+.entry {margin-bottom: 50px; background-color: #fff;}
 .entry .post {border-bottom: 1px solid #d9d9d9; padding-bottom: 15px;}
 .entry .post-meta {padding: 15px 0 15px 30px; border-bottom: 1px solid #d9d9d9; font-size: 11px; font-style: italic; color: #aaa9a9; position: relative;}
 .entry .post-meta h1 {color: #333; font-size: 30px; font-weight: normal; font-style: normal; margin-bottom: 5px;}
@@ -350,7 +350,7 @@ p#cancel-comment-reply {float: right; line-height: 28px; margin: 0;}
 
 /*** Sidebar ***/
 
-.sidebar {width: 275px; padding: 4px 30px 0 0; float: left;}
+.sidebar {margin-top: -100px; width: 270px; padding: 4px 15px 0 15px; float: left; background: #fff;}
 .widget {margin-bottom: 35px;}
 .widget-small {width: 130px;}
 .widget h3, .widget-small h3 {color: #1f2122; font-size: 14px; font-weight: normal; text-transform: uppercase; padding-bottom: 15px; margin-bottom: 20px; border-bottom: 1px solid #d9d9d9;}
@@ -402,3 +402,5 @@ p#cancel-comment-reply {float: right; line-height: 28px; margin: 0;}
 p.copyright {float: left; color: #333;}
 p.copyright span {color: #737373;}
 .credits {float: right;}
+.bottom_menu li {float: left; text-transform: lowercase;}
+.bottom_menu li:after {content: " | "; padding: 0 10px;}
