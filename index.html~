@@ -1,0 +1,163 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>The Endeleo Project</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- end CSS-->
+
+  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+
+<body>
+
+  <div id="container">
+    <header>
+      <hgroup>
+	<a id="site-title" href="index.html"><h1 class="ir">The Endeleo Project</h1></a>
+	<h2 id="site-description">Connecting those willing to give with those who need it most <a href="donate.html">donate</a></h2>
+      </hgroup>
+
+      <nav>
+	<ul>
+	  <li><a href="about.html">about</a></li>
+	  <li><a href="partners.html">partners</a></li>
+	  <li><a href="transparency.html">transparency</a></li>
+	  <li><a href="news.html">news</a></li>
+	  <li><a href="contact.html">contact</a></li>
+	</ul>
+      </nav>
+    </header>
+    <div id="main" role="main">
+
+      <div id="primary">
+
+	<ul id="testimonials" class="slideshow">
+	  <li>
+	    <blockquote>I love endeleo.</blockquote>
+      
+	    <div id="hcard-Chris-Johnson" class="vcard">
+	      <div>
+		<span class="fn">Chris Johnson</span>,
+		<span class="title">web developer</span>,
+	      </div>
+	      <div>
+		<a class="url org" href="http://vivacollective.org">viva collective</a>,
+		<div class="adr">
+		  <span class="country-name">United States</span>
+		</div>
+	      </div>
+	    </div>
+	  </li>
+	  <li>
+	    <blockquote>Because of the Endeleo Project, our school is flourishing. The funding we have received through them <em>has made all the difference to the children here.</em></blockquote>
+      
+	    <div id="hcard-Kim-Smith" class="vcard">
+	      <div>
+		<span class="fn">Kim Smith</span>,
+		<span class="title">Program Manager</span>,
+	      </div>
+	      <div>
+		<a class="url org" href="http://vivacollective.org">School name</a>,
+		<div class="adr">
+		  <span class="country-name">Kenya</span>
+		</div>
+	      </div>
+	    </div>
+	  </li>
+	</ul>
+      </div>
+
+      <div id="secondary">
+	<div id="mission">
+	  <h3>Our Mission</h3>
+	  <p>The Endeleo Project connects donors to educational organizations in developing countries to give children the tools they need to improve their world.</p>
+	</div>
+
+	<div id="goal">
+	  <h3>Low Overhead + Transparency</h3>
+	  <p>Our goal is to increase the efficiency blah blah blah blah blah blah blah blah blah blah blah blah blah
+	    <a href="about.html">more</a>
+	  </p>
+	</div>
+      </div>
+
+      <div id="tertiary" class="clearfix">
+	<div id="featured-partner">
+	  <h4>Featured Partner</h4>
+	  <section class="partner">
+	    <img src="http://placekitten.com/280/210">
+	    <h5>Vispa</h5>
+	    <p>
+	      With the help of The Endeleo Project's donors,
+	      VISPA recently expanded its school, completing
+	      construction of a new building two kilometers
+	      from the original site. 
+	      <a href="vispapictures.html">See Pictures</a>
+	    </p>
+	    <a href="partners.html">All Endeleo Partners</a>
+	  </section>
+	</div>
+
+	<div id="give">
+	  <h4>Give - How it works</h4>
+	  <section>
+	    <img />
+	    <h5>Investing in the Future</h5>
+	    <p>
+	      At The Endeleo Project, we call our donors
+	      "investors" and their donations "investments"
+	      beacause that is how we treat them - 
+	      donations are more valuable if the produce
+	      returns that continue into the future.
+	      <a href="about.html">More about Endeleo</a>
+	    </p>
+	  </section>
+	</div>
+      </div><!-- end of tertiary -->
+
+    </div> <!-- end of #main -->
+
+    <footer>
+
+    </footer>
+
+  </div> <!--! end of #container -->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+
+
+  <!-- scripts concatenated and minified via ant build script-->
+  <script defer src="js/mylibs/jquery.cycle.lite.js"></script>
+  <script defer src="js/plugins.js"></script>
+  <script defer src="js/script.js"></script>
+  <!-- end scripts-->
+
+
+  <script> // Change UA-XXXXX-X to be your site's ID
+    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+    Modernizr.load({
+      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+    });
+  </script>
+
+
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+  
+</body>
+</html>

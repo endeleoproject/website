@@ -1,0 +1,30 @@
+/* Author: 
+
+*/
+(function($){
+        
+        $('.slideshow').cycle();
+
+})(jQuery);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
