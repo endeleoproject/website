@@ -504,6 +504,31 @@ h5{
     float:left;
 }
 
+/* about page content */
+
+#about{
+    width:550px;
+    margin-top:25px;
+    margin-left:40px;
+    padding:0;
+}
+
+#about h2{
+		padding-top:15px;
+    font-family: "QuicksandBook";
+    font-size:24px;
+    color:#bf5200;
+    text-transform:uppercase;
+}
+
+#about p{
+    font-family:"QuicksandBold";
+    font-weight:normal;
+    font-size:17px;
+    line-height:26px;
+    color:#bf5200;
+}
+
 
 
 
