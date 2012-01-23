@@ -373,6 +373,21 @@ footer nav li:last-child{
     margin:0 35px;
 }
 
+.links{
+    margin: 0 36px;
+    border-top: 10px solid #c4c746;
+}
+
+.links dt{
+    padding-top: 22px;
+    font-family: "QuicksandBold";
+    font-size: 16px;
+}
+
+.links dd{
+    margin: 0;
+}
+
 #mission{
     color:#68b6b8;
     line-height:26px;
@@ -527,6 +542,38 @@ h5{
     font-size:17px;
     line-height:26px;
     color:#bf5200;
+}
+
+/* About Content */
+
+.stat{
+    margin-top: 20px;
+    margin-bottom: -10px;
+    padding: 0 36px;
+    padding-bottom: 10px;
+    font-size:50px;
+    font-family:"QuicksandBold";
+    font-weight:bold;
+    color:#c4c746;
+    text-align: center
+}
+
+.quote{
+    padding: 0 36px;
+    padding-bottom: 50px;
+    font-family:"QuicksandBold";
+    font-size:17px;
+    line-height:26px;
+    color:#c4c746;
+}
+
+.cite{
+    padding: 0 36px;
+    margin-top: -50px;
+    font-family:"QuicksandBook";
+    font-size:17px;
+    line-height:26px;
+    color:#c4c746;
 }
 
 
