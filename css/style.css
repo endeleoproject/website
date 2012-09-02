@@ -199,7 +199,8 @@ h5,h6{
     line-height:22px;
 }
 
-a{
+a,
+a:visited{
     color:#68b6b8;
     text-decoration:none;
     transition: opacity 0.3s ease-in-out;
@@ -248,8 +249,10 @@ header{
 
 header a,
 header a:hover,
+header a:visited,
 footer a,
-footer a:hover{
+footer a:hover,
+footer a:visited{
     color:#fff;
 }
 
@@ -396,14 +399,22 @@ footer nav li:last-child{
 
 /* testimonials */
 
-#testimonials{
+#primary{
     font-family: "QuicksandBook";
     font-size:17px;
     line-height:22px;
+}
+
+#testimonials{
+/*    font-family: "QuicksandBook";
+    font-size:17px;
+    line-height:22px;
+*/
     height:390px;
-    width:590px;
     margin-left:40px;
     padding:0;
+    width:590px;
+
 }
 
 #testimonials blockquote{
