@@ -1,25 +1,30 @@
-application: endeleo-website
-version: 1 
-runtime: python 
+application: ctst
+version: 1
+runtime: python27
 api_version: 1
+threadsafe: yes
 
-default_expiration: "30d"
+builtins:
+- remote_api: on
 
-handlers: 
-- url: /img/(.*) 
-  static_files: img/\1 
-  upload: img/(.*) 
-- url: /css/(.*) 
-  static_files: css/\1 
-  upload: css/(.*) 
-- url: /js/(.*) 
-  static_files: js/\1 
-  upload: js/(.*) 
-- url: /fonts/(.*) 
-  static_files: fonts/\1 
-  upload: fonts/(.*) 
-- url: /(.*\.html) 
-  static_files: \1 
-  upload: .*.html 
-- url: /.* 
-  script: main.py
+inbound_services:
+- warmup
+
+libraries:
+- name: django
+  version: latest
+
+handlers:
+- url: /_ah/queue/deferred
+  script: djangoappengine.deferred.handler.application
+  login: admin
+
+- url: /_ah/stats/.*
+  script: djangoappengine.appstats.application
+
+- url: /media/admin
+  static_dir: django/contrib/admin/media
+  expiration: '0'
+
+- url: /.*
+  script: djangoappengine.main.application
